@@ -13,6 +13,13 @@
 }
 
 @layer components{
+    .hovbtn{}
+    .btn{
+        color: #156963;
+    }
+    .hovbtn:hover > .btn{
+        color: white;
+    }
     .hstack{
         display: flex;
         flex-direction: row;
