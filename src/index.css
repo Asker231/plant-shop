@@ -13,6 +13,14 @@
 }
 
 @layer components{
+    .hstack{
+        display: flex;
+        flex-direction: row;
+    }
+    .vstack{
+        display: flex;
+        flex-direction: column;
+    }
     .itio{
         font-family: "Nunito", sans-serif;
     }
