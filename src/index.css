@@ -13,6 +13,46 @@
 }
 
 @layer components{
+    .services{
+        background-color: #E0E0E0;
+        overflow:hidden ;
+        border-radius: 10px;
+        padding: 10px;
+        
+    }
+    .services::before{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 600px;
+        background-color: #156963;
+        left: 30%;
+        top: -200px;
+        animation: rotates 5s linear infinite;
+
+    }
+
+    .services::after{
+        position: absolute;
+        content: "";
+        z-index: 5;
+        inset: 2px;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+    @keyframes rotates {
+        0%{
+          transform: rotate(360deg);
+        } 100%{
+          transform: rotate(0deg);
+        } 
+  }
+
+    
+}
+
+@layer components{
+
     .hovbtn{}
     .btn{
         color: #156963;
@@ -51,7 +91,7 @@
         height: 750px;
         right: 0px;
         top: 0px;
-        animation: rotate 8s infinite linear ;
+        animation: rotate 8s 0s infinite linear ;
     }
     .wrap::after{
         position: absolute;
@@ -63,16 +103,16 @@
     }
     @keyframes rotate {
             0%{
-                transform: rotate(210deg);
-            
+                transform: rotate(215deg);
             }
             50%{
                 transform: rotate(327deg);
             }
             100%{
-                transform: rotate(210deg);
+                transform: rotate(215deg);         
             }
     }
+
     
 }
 

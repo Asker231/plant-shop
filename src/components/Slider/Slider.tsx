@@ -18,7 +18,6 @@ function Slider() {
       setCount(sliderProp.length-1)
     }
   }
-  
   return (
     <div className="flex wrap z-[5] items-start">
     <img src={sliderProp[count].photo} className="w-[608px]  transition duration-300 z-[10] h-[740px]" alt="" />
@@ -34,7 +33,7 @@ function Slider() {
           <img src="/public/arrow-left.svg" alt="" /> 
           <span className="text-[24px]">Previous</span> 
           </div>
-          <span className="btn transition duration-300">{ count == 0 ? sliderProp[count].title : sliderProp[count-1].title}</span>
+          <span className="btn  font-medium  montserrat transition duration-300">{ count == 0 ? sliderProp[count].title : sliderProp[count-1].title}</span>
           </button>
           <button  onClick={()=>nextSlide()} 
           className=" hovbtn w-[320px] hover:bg-primary px-6  hover:text-white  z-[10] h-[160px] flex flex-col items-start justify-center text-[#999999] transition ease-in-out duration-500">
@@ -42,7 +41,7 @@ function Slider() {
             <span className="text-[24px]">Next</span> 
             <img src="/public/arrow-back-outline.svg" alt="" />
             </div>
-            <span className="btn  transition duration-300">{ count == sliderProp.length-1  ?  sliderProp[count].title : sliderProp[count+1].title}</span>
+            <span className=" btn font-medium montserrat transition duration-300">{ count == sliderProp.length-1  ?  sliderProp[count].title : sliderProp[count+1].title}</span>
             </button>
       </div>
     </div>

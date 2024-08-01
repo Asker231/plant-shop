@@ -1,8 +1,7 @@
 function Header() {
   return (
-    <div className=" fixed p-4 z-10 flex margin-center left-[14%] min-w-[1168px] justify-between items-center ">
+    <div className=" fixed p-4 z-10 flex margin-center left-[14.4%] min-w-[1168px] justify-between items-center ">
        <img src="/public/logo.svg" className="w-9 h-9" alt="" />
-
        <div className="flex items-center gap-3 ">
          <button className="border-none">
                     <img src="/public/search-icon.svg" className="w-5 h-5"  alt="" />
