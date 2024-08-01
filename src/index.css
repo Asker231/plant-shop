@@ -8,7 +8,6 @@
 
  @layer base{
     body{
-        font-family: "Montserrat", sans-serif;
         width: 100vw;
     }
 }
@@ -17,9 +16,49 @@
     .itio{
         font-family: "Nunito", sans-serif;
     }
+    .montserrat{
+        font-family: "Montserrat", sans-serif;
+    }
     .margin-center {
         margin: 0 auto;
     }
+    .wrap{
+        position: relative;
+        overflow: hidden;
+        z-index: -3;
+        border-top-right-radius: 10px;
+    }
+    .wrap::before{
+        position: absolute;
+        content: "";
+        background-color: #156963;
+        width: 200px;
+        height: 750px;
+        right: 0px;
+        top: 0px;
+        animation: rotate 8s infinite linear ;
+    }
+    .wrap::after{
+        position: absolute;
+        content: "";
+        inset: 2px;
+        z-index: 5;
+        border-top-right-radius: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+    @keyframes rotate {
+            0%{
+                transform: rotate(210deg);
+            
+            }
+            50%{
+                transform: rotate(327deg);
+            }
+            100%{
+                transform: rotate(210deg);
+            }
+    }
+    
 }
 
 

@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        "primary":"#166963"
+        "primary":"#166963",
+        "prmary2":"#2C1500"
       }
     },
   },
