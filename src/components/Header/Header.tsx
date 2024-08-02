@@ -1,6 +1,22 @@
+import { useEffect, useRef } from "react"
+
 function Header() {
+  const headerRef = useRef<HTMLDivElement>(null)
+  useEffect(()=>{
+    document.addEventListener('scroll',()=>{
+        if(window.scrollY > 20){
+          if(headerRef.current){
+            headerRef.current.style.display = "none" 
+          }
+        }else{
+          if(headerRef.current){
+            headerRef.current.style.display = "flex" 
+          }
+        }
+    })
+  },[])
   return (
-    <div className=" fixed p-4 z-10 flex margin-center left-[14.4%] min-w-[1168px] justify-between items-center ">
+    <div ref={headerRef} className=" fixed p-4 z-10 flex margin-center left-[14.4%] min-w-[1168px] justify-between items-center ">
        <img src="/public/logo.svg" className="w-9 h-9" alt="" />
        <div className="flex items-center gap-3 ">
          <button className="border-none">
